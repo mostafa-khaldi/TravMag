@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "AvenirNextLTPro-Demi";
+    src: url("./fonts/AvenirNextLTPro-Demi.wof");
+}
+
+@font-face {
+    font-family: "AvenirNextLTPro-Regular";
+    src: url("./fonts/AvenirNextLTPro-Regular.wof");
+}
+body {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("./images/header-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.header img {
+    width: 200px;
+    padding: 40px 0;
+}
+
+.header h1 {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 50px;
+    font-weight: 100;
+    padding-bottom: 800px;
+}
+
+.main h1 {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 30px;
+    font-weight: 100;
+}
+
