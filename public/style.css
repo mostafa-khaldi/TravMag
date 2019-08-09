@@ -11,6 +11,11 @@ body {
     margin: 0;
 }
 
+.wrapper {
+    width: 70%;
+    margin: auto;
+}
+
 .header {
     display: flex;
     justify-content: center;
@@ -31,11 +36,86 @@ body {
     font-size: 50px;
     font-weight: 100;
     padding-bottom: 800px;
+    text-align: center;
 }
 
-.main h1 {
+.main {
+    background-color: black;
+    padding: 20px 0 160px 0;
+}
+
+.main div h1 {
     font-family: "AvenirNextLTPro-Regular";
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 100;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
 }
 
+.postCard {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.postCard img {
+    width: 50%;
+    flex-basis: 50%;
+}
+
+.postCard .context {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.postCard .context h1 {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 25px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.postCard .context p, .postCard .context a {
+    color: white;
+    text-decoration: none;
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.postCard .context a {
+    color: #ff5454;
+}
+
+.posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .button button {
+    font-size: 20px;
+    font-family: "AvenirNextLTPro-Regular";
+    padding: 7px 40px;
+    margin-top: 30px;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 40px;
+}
+
+.main .button button:hover {
+    cursor: pointer;
+}

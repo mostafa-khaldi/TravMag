@@ -4,8 +4,8 @@ import Logo from "./images/logo.png"
 function Header(){
     return (
         <div className="header">
-            <img src={Logo} alt="Logo"/>
-            <h1>Where all travelers inspired their trips</h1>
+            <img className="wrapper" src={Logo} alt="Logo"/>
+            <h1 className="wrapper">Where all travelers inspire their trips</h1>
         </div>
     )
 }

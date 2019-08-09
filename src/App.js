@@ -1,5 +1,6 @@
 import React, {Component} from "react"
-import Article from "./Article"
+import ArticlePreview from "./ArticlePreview"
+
 class App extends Component {
 
   constructor(){
@@ -24,10 +25,11 @@ class App extends Component {
      this.state.articleData.map(
       (articleData) => {
         return (
-          <Article 
+          <ArticlePreview 
             key={articleData.id}
             image={articleData.thumbnail.url}
-            title={articleData.thumbnail.title}
+            alt={articleData.thumbnail.alt}
+            title={articleData.title}
             excerpt={articleData.excerpt}
           />
         )
@@ -41,8 +43,15 @@ class App extends Component {
     } else {
       return(
         <div className="main">
+          <div className="wrapper">
             <h1>See what's new</h1>
-            {dataArray}
+            <div className="posts">
+              {dataArray}
+            </div>
+            <div className="button">
+              <button>Load more</button>
+            </div>
+          </div>
         </div>
       )
     }
@@ -50,50 +59,3 @@ class App extends Component {
 }
 
 export default App
-
-// import React, {Component} from "react"
-// import Article from "./Article"
-
-// class App extends Component{
-
-//   constructor(){
-//     super()
-//     this.state = {
-//       imgSrc: " ",
-//       data: []
-//     }
-//   }
-
-//   componentDidMount(){
-//     fetch("http://trivago-magazine-work-sample-server.s3-website.eu-central-1.amazonaws.com/latest_posts.json")
-//     .then(response => response.json())
-//     .then(response => {
-//       this.setState({
-//         data: response
-//       })
-//     })
-//   }
-
-//   render(){
-//     const dataArray = this.state.data.length === 0 ? "Looding.." :
-//       this.state.data.map(data => {
-//         return (
-//           <Article 
-//             key={data.id}
-//             title={data.title} 
-//             thumbnail={data.thumbnail.url} 
-//             alt={data.thumbnail.alt}
-//             excerpt={data.excerpt}  
-//             uri={data.uri}
-//           />
-//         )
-//       })
-//     return(
-//       <div className="cards">
-//         {dataArray}
-//       </div>
-//     )
-//   }
-// }
-
-// export default App
