@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
 function ArticlePreview(props){
     return(
@@ -7,7 +8,7 @@ function ArticlePreview(props){
             <div className="context">
                 <h1>{props.title}</h1>
                 <p>{props.excerpt}</p>
-                <a href="#">Read more &rarr;</a>
+                <Link to={`/${props.id}`}>Read more &rarr;</Link>
             </div>
         </div>
     )
