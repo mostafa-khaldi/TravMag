@@ -223,7 +223,7 @@ body {
 }
 
 .articleWrapper hr {
-    width: 50%;
+    width: 30%;
     margin-bottom: 30px;
     margin-left: 0;
 }
@@ -231,4 +231,50 @@ body {
 .articleWrapper .excerpt, .articleWrapper .articleContent {
     font-size: 20px;
     line-height: 30px;
+}
+
+.postSug h2 {
+    color: #ff5454;
+    font-weight: 200;
+    margin-top: 80px;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightArrow, .leftArrow {
+    flex-basis: 4%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.rightArrow {
+    text-align: right;
+}
+
+.postsWrapper {
+    display: flex;
+    overflow: scroll;
+}
+
+.postsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.postPrev {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 40px 0 0;
+}
+
+.postPrev img {
+    width: 100%;
+    border-radius: 8px;
 }

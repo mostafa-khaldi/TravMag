@@ -1,4 +1,5 @@
 import React , {Component} from "react"
+import PostsSuggestion from "./PostsSuggestion"
 import Footer from "./Footer"
 import logo from "./images/logo.png";
 import gif from "./images/spinnerGIF.svg"
@@ -48,6 +49,10 @@ class Article extends Component{
                             <div className="articleContent">
                                 <Markup content={data.content[0].text}/>
                             </div>
+                        </div>
+                        <div className="postSug">
+                            <h2>More Topics</h2>
+                            <PostsSuggestion/>
                         </div>
                     </div>
                     <Footer />
