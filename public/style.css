@@ -26,7 +26,7 @@ body {
     background-position: center center;
 }
 
-.header img {
+.logo {
     width: 200px;
     padding: 40px 0;
 }
@@ -153,4 +153,82 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+}
+
+.spinner img {
+    width: 50px;
+}
+
+.articleComponent .articleArea{
+    padding-bottom: 80px;
+}
+
+.articleComponent, .articleComponent a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articleWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.articleWrapper img {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.articleWrapper h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.articleMeta {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.articleMeta .date {
+    padding: 0 10px 0 0;
+    font-weight: 100;
+    box-sizing: content-box;
+    border-right: 1px solid white;
+}
+
+.articleWrapper .author {
+    padding: 0 0 0 10px;
+}
+
+.author span {
+    font-weight: 100;
+}
+
+.articleWrapper hr {
+    width: 50%;
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+.articleWrapper .excerpt, .articleWrapper .articleContent {
+    font-size: 20px;
+    line-height: 30px;
 }

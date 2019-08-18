@@ -8,7 +8,7 @@ function ArticlePreview(props){
             <div className="context">
                 <h1>{props.title}</h1>
                 <p>{props.excerpt}</p>
-                <Link to={`/${props.id}`}>Read more &rarr;</Link>
+                <Link to={`/${props.slug}`}>Read more &rarr;</Link>
             </div>
         </div>
     )

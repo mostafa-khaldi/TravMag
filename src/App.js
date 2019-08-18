@@ -1,5 +1,7 @@
 import React, {Component} from "react"
+import gif from "./images/spinnerGIF.svg"
 import Header from "./Header"
+import Footer from "./Footer"
 import ArticlePreview from "./ArticlePreview"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Article from "./Article"
@@ -28,11 +30,10 @@ class App extends Component {
     const dataArray = this.state.articleData.length != 0 ?
      this.state.articleData.map(
       (articleData) => {
-        console.log(articleData.id);
         return (
           <ArticlePreview 
             key={articleData.id}
-            id={articleData.id}
+            slug={articleData.slug}
             image={articleData.thumbnail.url}
             alt={articleData.thumbnail.alt}
             title={articleData.title}
@@ -42,9 +43,11 @@ class App extends Component {
       } 
     ) : " ";
 
-    if (dataArray === ""){
+    if (dataArray === " "){
       return(
-        <div></div>
+        <div className="spinner">
+          <img src={gif} alt="spinner" />
+        </div>
       )
     } else {
       const homeComponent = () => {
@@ -62,6 +65,7 @@ class App extends Component {
                 </div>
               </div>
              </div>
+             <Footer />
           </div>
         )
       }
