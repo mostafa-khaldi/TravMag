@@ -1,13 +1,17 @@
 import React, {Component} from "react"
 import Post from "./Post"
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 
 class PostsSuggestion extends Component {
 
     constructor(){
         super()
         this.state = {
-            data: []
+            data: [],
+            position: 1
         }
+        this.transLeft = this.transLeft.bind(this)
+        this.transRight = this.transRight.bind(this)
     }
 
     componentDidMount(){
@@ -20,12 +24,31 @@ class PostsSuggestion extends Component {
             })
     }
 
-    clickme(){
-        alert("Hey");
+    transLeft(index, arrayLength){
+        if(index === 1) {
+            this.setState({
+                position: -1*(100/(arrayLength)*1)
+            })
+        } else {
+            let i=((index*arrayLength)/100)-1;
+            if(-1*i <= arrayLength-3){
+                this.setState({
+                    position: (100/(arrayLength)*i)
+                })  
+            }
+        }
+    }
+
+    transRight(index, arrayLength){
+        if(index < 1 && index !== 0) {
+            this.setState({
+                    position: index - (-1*(100/(arrayLength)))
+            })
+        }
     }
 
     render(){
-        const dataArray = this.state.data.length != 0 ? 
+        const dataArray = this.state.data.length !== 0 ? 
             this.state.data.map(postData => {
                 return(
                     <Post 
@@ -33,6 +56,7 @@ class PostsSuggestion extends Component {
                         imageURL={postData.thumbnail.url}
                         alt={postData.thumbnail.alt}
                         title={postData.title}
+                        slug={postData.slug}
                     />
                 )
             })
@@ -43,15 +67,16 @@ class PostsSuggestion extends Component {
                 <div></div>
             )
         } else {
+            // const dataArray_2 = dataArray.concat(dataArray);
             return(
                 <div className="slider">
-                    <div className="leftArrow">❮</div>
+                    <div className="leftArrow" onClick={() => this.transRight(this.state.position,dataArray.length)}>❮</div>
                     <div className="postsWrapper">
-                        <div className="postsContainer">
+                        <div className="postsContainer" style={{"transform":`translateX(${this.state.position}%)`}}>
                             {dataArray}
                         </div>
                     </div>
-                    <div className="rightArrow">❯</div>
+                    <div className="rightArrow" onClick={() => this.transLeft(this.state.position,dataArray.length)}>❯</div>
                 </div>
             )
         }

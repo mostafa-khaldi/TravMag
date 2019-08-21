@@ -1,11 +1,11 @@
 @font-face {
     font-family: "AvenirNextLTPro-Demi";
-    src: url("./fonts/AvenirNextLTPro-Demi.wof");
+    src: url("./fonts/AvenirNextLTPro-Demi.otf");
 }
 
 @font-face {
     font-family: "AvenirNextLTPro-Regular";
-    src: url("./fonts/AvenirNextLTPro-Regular.wof");
+    src: url("./fonts/AvenirNextLTPro-Regular.otf");
 }
 body {
     margin: 0;
@@ -28,7 +28,7 @@ body {
 
 .logo {
     width: 200px;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .header h1 {
@@ -45,9 +45,9 @@ body {
 }
 
 .main div h1 {
-    font-family: "AvenirNextLTPro-Regular";
+    font-family: "AvenirNextLTPro-Demi";
     font-size: 40px;
-    font-weight: 100;
+    font-weight: 400;
     color: white;
     text-align: center;
     padding: 50px 0;
@@ -191,14 +191,12 @@ body {
     flex-direction: column;
 }
 
-.articleWrapper img {
-    width: 100%;
-    padding: 40px 0;
-}
-
 .articleWrapper h1 {
+    font-family: "AvenirNextLTPro-Demi";
     font-size: 40px;
     margin-bottom: 0;
+    font-weight: 500;
+    margin-top: 60px;
 }
 
 .articleMeta {
@@ -215,11 +213,12 @@ body {
 }
 
 .articleWrapper .author {
+    font-family: "AvenirNextLTPro-Demi";
     padding: 0 0 0 10px;
 }
 
 .author span {
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .articleWrapper hr {
@@ -257,12 +256,15 @@ body {
 
 .postsWrapper {
     display: flex;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .postsContainer {
     display: flex;
     justify-content: center;
+    position: relative;
+    transform: translateX(0%);
+    transition: 0.3s ease-in-out;
 }
 
 .postPrev {

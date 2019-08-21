@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   render(){
-    const dataArray = this.state.articleData.length != 0 ?
+    const dataArray = this.state.articleData.length !== 0 ?
      this.state.articleData.map(
       (articleData) => {
         return (

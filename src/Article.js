@@ -4,7 +4,7 @@ import Footer from "./Footer"
 import logo from "./images/logo.png";
 import gif from "./images/spinnerGIF.svg"
 import { Markup } from "interweave";
-import {Link} from "react-router-dom"
+import {BrowserRouter as Router ,Link} from "react-router-dom"
 
 
 class Article extends Component{
@@ -28,17 +28,24 @@ class Article extends Component{
     }
 
     render(){
-        const data = this.state.data.length != 0 ? this.state.data : null
+        const data = this.state.data.length !== 0 ? this.state.data : null
 
         if (data != null) {
+            const style = {
+                backgroundImage: `url(${data.thumbnail.url})`,
+                width: "100%",
+                height: "50vh",
+                backgroundSize: "cover",
+                backgroundPosition: "center center"
+            }
             return(
                 <div className="articleComponent">
-                    <div className="wrapper articleArea">
+                    <div className="articleArea">
                         <div className="logoWrapper">
                             <Link to={"/"}><img className="logo" src={logo} alt="logo" /></Link>
                         </div>
-                        <div className="articleWrapper">
-                            <img src={data.thumbnail.url} alt={data.thumbnail.alt} />
+                        <div style={style}></div>
+                        <div className="wrapper articleWrapper">
                             <h1>{data.title}</h1>
                             <div className="articleMeta">
                                 <h4 className="date">{data.date}</h4>
@@ -50,9 +57,9 @@ class Article extends Component{
                                 <Markup content={data.content[0].text}/>
                             </div>
                         </div>
-                        <div className="postSug">
+                        <div className="wrapper postSug">
                             <h2>More Topics</h2>
-                            <PostsSuggestion/>
+                            <PostsSuggestion />
                         </div>
                     </div>
                     <Footer />
