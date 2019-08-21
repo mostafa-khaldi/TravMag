@@ -1,0 +1,6 @@
+.DS_Store
+README-2.md
+node_modules
+package-lock.json
+package.json
+/build
