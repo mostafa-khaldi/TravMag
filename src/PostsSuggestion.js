@@ -25,18 +25,6 @@ class PostsSuggestion extends Component {
     }
 
     transLeft(index, arrayLength){
-        // if(index === 1) {
-        //     this.setState({
-        //         position: -1*(100/(arrayLength)*1)
-        //     })
-        // } else {
-        //     let i=((index*arrayLength)/100)-1;
-        //     if(-1*i <= arrayLength-3){
-        //         this.setState({
-        //             position: (100/(arrayLength)*i)
-        //         })  
-        //     }
-        // }
         if(window.innerWidth >= 1100){
             if(index <= 0 && index >= -1*(arrayLength-4)*(100/arrayLength)) {
                 this.setState({
@@ -80,7 +68,6 @@ class PostsSuggestion extends Component {
                 <div></div>
             )
         } else {
-            // const dataArray_2 = dataArray.concat(dataArray);
             return(
                 <div className="slider">
                     <div className="leftArrow" onClick={() => this.transRight(this.state.position,dataArray.length)}>❮</div>
