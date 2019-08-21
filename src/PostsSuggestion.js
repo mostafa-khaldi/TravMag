@@ -8,7 +8,7 @@ class PostsSuggestion extends Component {
         super()
         this.state = {
             data: [],
-            position: 1
+            position: 0
         }
         this.transLeft = this.transLeft.bind(this)
         this.transRight = this.transRight.bind(this)
@@ -25,16 +25,29 @@ class PostsSuggestion extends Component {
     }
 
     transLeft(index, arrayLength){
-        if(index === 1) {
-            this.setState({
-                position: -1*(100/(arrayLength)*1)
-            })
-        } else {
-            let i=((index*arrayLength)/100)-1;
-            if(-1*i <= arrayLength-3){
+        // if(index === 1) {
+        //     this.setState({
+        //         position: -1*(100/(arrayLength)*1)
+        //     })
+        // } else {
+        //     let i=((index*arrayLength)/100)-1;
+        //     if(-1*i <= arrayLength-3){
+        //         this.setState({
+        //             position: (100/(arrayLength)*i)
+        //         })  
+        //     }
+        // }
+        if(window.innerWidth >= 1100){
+            if(index <= 0 && index >= -1*(arrayLength-4)*(100/arrayLength)) {
                 this.setState({
-                    position: (100/(arrayLength)*i)
-                })  
+                    position: index + (-1*(100/(arrayLength)))
+                })
+            }
+        } else {
+            if(index <= 0 && index >= -1*(arrayLength-2)*(100/arrayLength)) {
+                this.setState({
+                    position: index + (-1*(100/(arrayLength)))
+                })
             }
         }
     }
@@ -42,7 +55,7 @@ class PostsSuggestion extends Component {
     transRight(index, arrayLength){
         if(index < 1 && index !== 0) {
             this.setState({
-                    position: index - (-1*(100/(arrayLength)))
+                position: index - (-1*(100/(arrayLength)))
             })
         }
     }

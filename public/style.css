@@ -248,6 +248,7 @@ body {
     flex-basis: 4%;
     font-size: 30px;
     cursor: pointer;
+    margin: 0 15px;
 }
 
 .rightArrow {
@@ -268,7 +269,7 @@ body {
 }
 
 .postPrev {
-    width: 300px;
+    width: 326px;
     display: flex;
     justify-content: space-between;
     align-items: center;

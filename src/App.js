@@ -12,8 +12,10 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      articleData: []
+      articleData: [],
+      index: 2
     }
+    this.changeIndex = this.changeIndex.bind(this)
   }
 
   componentDidMount(){
@@ -24,6 +26,14 @@ class App extends Component {
           articleData: response
         })
       })
+  }
+
+  changeIndex(){
+    if(this.state.index < this.state.articleData.length){
+      this.setState({
+        index: this.state.index+1
+      })
+    }
   }
 
   render(){
@@ -50,7 +60,23 @@ class App extends Component {
         </div>
       )
     } else {
+      const dataArrayToDisplay = []
+
+      for(let i=0; i < this.state.index; i++){
+        dataArrayToDisplay.push(dataArray[i]);
+      }
+
       const homeComponent = () => {
+        const buttonText = this.state.index !== dataArray.length ? "Load More" : "No More To Show"
+        const buttonStyle = this.state.index !== dataArray.length ? 
+        {
+          color: "white",
+          borderColor: "white"
+        } :
+        {
+          color: "#919191",
+          borderColor: "#919191"
+        }
         return(
           <div>
             <Header />
@@ -58,10 +84,10 @@ class App extends Component {
               <div className="wrapper">
                 <h1>See what's new</h1>
                 <div className="posts">
-                  {dataArray}
+                  {dataArrayToDisplay}
                 </div>
                 <div className="button">
-                  <button>Load more</button>
+                  <button onClick={this.changeIndex} style={buttonStyle}>{buttonText}</button>
                 </div>
               </div>
              </div>
