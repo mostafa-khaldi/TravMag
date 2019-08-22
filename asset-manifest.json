@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/TravMag/static/js/main.20f81442.chunk.js",
-    "main.js.map": "/TravMag/static/js/main.20f81442.chunk.js.map",
+    "main.js": "/TravMag/static/js/main.c05fba33.chunk.js",
+    "main.js.map": "/TravMag/static/js/main.c05fba33.chunk.js.map",
     "runtime~main.js": "/TravMag/static/js/runtime~main.064b572e.js",
     "runtime~main.js.map": "/TravMag/static/js/runtime~main.064b572e.js.map",
-    "static/js/2.24d140f5.chunk.js": "/TravMag/static/js/2.24d140f5.chunk.js",
-    "static/js/2.24d140f5.chunk.js.map": "/TravMag/static/js/2.24d140f5.chunk.js.map",
+    "static/js/2.5a0bc9af.chunk.js": "/TravMag/static/js/2.5a0bc9af.chunk.js",
+    "static/js/2.5a0bc9af.chunk.js.map": "/TravMag/static/js/2.5a0bc9af.chunk.js.map",
     "index.html": "/TravMag/index.html",
-    "precache-manifest.72d8edc5e9555b16b00301e454e2a7d7.js": "/TravMag/precache-manifest.72d8edc5e9555b16b00301e454e2a7d7.js",
+    "precache-manifest.375d558b4b8d4ef7c936f895d59962fd.js": "/TravMag/precache-manifest.375d558b4b8d4ef7c936f895d59962fd.js",
     "service-worker.js": "/TravMag/service-worker.js",
     "static/media/spinnerGIF.svg": "/TravMag/static/media/spinnerGIF.a45e9c43.svg"
   }
