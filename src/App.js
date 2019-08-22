@@ -56,7 +56,7 @@ class App extends Component {
     if (dataArray === " "){
       return(
         <div className="spinner">
-          <img src={gif} alt="spinner" />
+          {/* <img src={gif} alt="spinner" /> */}
         </div>
       )
     } else {
