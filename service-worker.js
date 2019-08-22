@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/TravMag/precache-manifest.53e3770d9ff298e9c37a2ea432655212.js"
+  "/TravMag/precache-manifest.5b5bd84d5b693964ff219672c48c06cd.js"
 );
 
 self.addEventListener('message', (event) => {
