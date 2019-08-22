@@ -96,10 +96,12 @@ class App extends Component {
         )
       }
       return(
+        <div>
           <Switch>
             <Route path="/" exact component={homeComponent} />
             <Route path="/:id" component={Article} />
           </Switch>
+        </div>
       )
     }
   }
