@@ -1,0 +1,41 @@
+@media only screen and (max-width:1300px){
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .postCard {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .postCard img {
+        width: 100%;
+    }
+
+    .postCard .context h1, .postCard .context {
+        font-size: 20px;
+        margin: 10px 0 0;
+    }
+
+    .postCard .context p, .postCard .context a {
+        font-size: 15px;
+    }
+
+    .footer .footer-info {
+        flex-direction: column;
+    }
+
+    .footer-info ul {
+        padding: 0;
+    }
+
+    .postPrev {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width:1100px){
+    .postPrev {
+        width: 50vw;
+    } 
+}

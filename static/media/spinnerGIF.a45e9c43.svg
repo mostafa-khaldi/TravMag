@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none;stroke-miterlimit:10;}
+            .cls-1{stroke:#b3b3b3;stroke-width:13.1px;}
+            .cls-2{stroke:#fff;stroke-linecap:round;stroke-width:13.11px;}
+            #spinner {
+                animation-name: spin;
+                animation-duration: 1s;
+                transform-origin: center center;
+                animation-iteration-count: infinite;
+            }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </defs>
+    <title>spinnerGIF</title>
+    <g id="b-spinner">
+        <circle class="cls-1" cx="50" cy="50" r="39.13"/>
+    </g>
+    <g id="spinner">
+        <path class="cls-2" d="M10.87,50a39.13,39.13,0,0,1,78.26,0"/>
+    </g>
+</svg>
