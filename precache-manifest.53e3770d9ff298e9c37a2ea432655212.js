@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ff4675664b2920137d7910e2d8c24fe",
+    "revision": "7465ce817f21dfa5cb6671bafaf97c02",
     "url": "/TravMag/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TravMag/static/js/2.0331f77c.chunk.js"
   },
   {
-    "revision": "f3448d928c1fbfd8b6fb",
-    "url": "/TravMag/static/js/main.89ac0d3b.chunk.js"
+    "revision": "50004221cba17e3ff7e3",
+    "url": "/TravMag/static/js/main.aa165c2f.chunk.js"
   },
   {
     "revision": "a9aebd0ecfe83cfe235f",
