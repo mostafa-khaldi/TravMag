@@ -56,7 +56,7 @@ class App extends Component {
     if (dataArray === " "){
       return(
         <div className="spinner">
-          {/* <img src={gif} alt="spinner" /> */}
+          <img src={gif} alt="spinner" />
         </div>
       )
     } else {
@@ -96,12 +96,10 @@ class App extends Component {
         )
       }
       return(
-        <Router>
           <Switch>
             <Route path="/" exact component={homeComponent} />
             <Route path="/:id" component={Article} />
           </Switch>
-        </Router>
       )
     }
   }
