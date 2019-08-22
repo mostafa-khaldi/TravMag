@@ -3,9 +3,8 @@ import gif from "./images/spinnerGIF.svg"
 import Header from "./Header"
 import Footer from "./Footer"
 import ArticlePreview from "./ArticlePreview"
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {Switch, Route} from "react-router-dom"
 import Article from "./Article"
-import data from "./content"
 
 
 
@@ -21,16 +20,16 @@ class App extends Component {
   }
 
   componentDidMount(){
-    // fetch("http://trivago-magazine-work-sample-server.s3-website.eu-central-1.amazonaws.com/latest_posts.json")
-    //   .then(response => response.json())
-    //   .then(response => {
-    //     this.setState({
-    //       articleData: response
-    //     })
-    //   })
-    this.setState({
-      articleData: data
-    })
+    fetch("http://trivago-magazine-work-sample-server.s3-website.eu-central-1.amazonaws.com/latest_posts.json")
+      .then(response => response.json())
+      .then(response => {
+        this.setState({
+          articleData: response
+        })
+      })
+    // this.setState({
+    //   articleData: data
+    // })
   }
 
   changeIndex(){

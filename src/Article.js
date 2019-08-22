@@ -4,7 +4,7 @@ import Footer from "./Footer"
 import logo from "./images/logo.png";
 import gif from "./images/spinnerGIF.svg"
 import { Markup } from "interweave";
-import {BrowserRouter as Router ,Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
 class Article extends Component{
