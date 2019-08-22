@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/TravMag/static/js/main.8c3c6c06.chunk.js",
-    "main.js.map": "/TravMag/static/js/main.8c3c6c06.chunk.js.map",
+    "main.js": "/TravMag/static/js/main.47977397.chunk.js",
+    "main.js.map": "/TravMag/static/js/main.47977397.chunk.js.map",
     "runtime~main.js": "/TravMag/static/js/runtime~main.064b572e.js",
     "runtime~main.js.map": "/TravMag/static/js/runtime~main.064b572e.js.map",
     "static/js/2.5a0bc9af.chunk.js": "/TravMag/static/js/2.5a0bc9af.chunk.js",
     "static/js/2.5a0bc9af.chunk.js.map": "/TravMag/static/js/2.5a0bc9af.chunk.js.map",
     "index.html": "/TravMag/index.html",
-    "precache-manifest.5b5bd84d5b693964ff219672c48c06cd.js": "/TravMag/precache-manifest.5b5bd84d5b693964ff219672c48c06cd.js",
+    "precache-manifest.63ac9564829e93b387ec6ae6a4de7fad.js": "/TravMag/precache-manifest.63ac9564829e93b387ec6ae6a4de7fad.js",
     "service-worker.js": "/TravMag/service-worker.js",
     "static/media/spinnerGIF.svg": "/TravMag/static/media/spinnerGIF.a45e9c43.svg"
   }
