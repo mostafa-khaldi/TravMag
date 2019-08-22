@@ -58,13 +58,13 @@ class App extends Component {
       } 
     ) : " ";
 
-    // if (dataArray === " "){
-    //   return(
-    //     <div className="spinner">
-    //       <img src={gif} alt="spinner" />
-    //     </div>
-    //   )
-    // } else {
+    if (dataArray === " "){
+      return(
+        <div className="spinner">
+          <img src={gif} alt="spinner" />
+        </div>
+      )
+    } else {
       const dataArrayToDisplay = []
 
       for(let i=0; i < this.state.index; i++){
@@ -109,7 +109,7 @@ class App extends Component {
         </div>
       )
     }
-  // }
+  }
 }
 
 export default App
